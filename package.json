@@ -1,0 +1,23 @@
+{
+  "name": "sakurabot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.4.0",
+    "async_hooks": "^1.0.0",
+    "discord.js": "^12.3.1",
+    "ffmpeg": "0.0.4",
+    "fs": "0.0.1-security",
+    "vm": "^0.1.0",
+    "ytdl-core": "^4.4.5",
+    "ytpl": "^2.0.5",
+    "ytsearcher": "^1.2.3"
+  }
+}
