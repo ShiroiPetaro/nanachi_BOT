@@ -5,15 +5,13 @@ module.exports.run = async (client, message, args, queue, searcher) => {
     if(!serverQueue)
         return message.channel.send("No hay nada para saltar.");
     
+    let roleN = message.guild.roles.cache.find(role => role.name === "DJ")
 
-    if(!message.member.hasPermission('MANAGE_CHANNELS') || message.member.hasPermission("ADMINISTRATOR"))
-        return message.channel.send('Nanachi no te obedece');
-    
-        
-
+    if(!message.member.roles.cache.get(roleN.id))
+        return message.channel.send('UPS! No tienes el rol de **"DJ"**.');
 
     serverQueue.connection.dispatcher.end();
-    serverQueue.skipVotes = []; 
+    serverQueue.skipVotes = [];
 }
 
 module.exports.config = {
